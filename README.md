@@ -5,5 +5,7 @@ Make sure you have ESP-IDF from https://github.com/espressif/esp-idf --branch re
 
 Then go to
 cd robot/btstack/port/esp32 
-And run this line to setup and install the btstack files 
+run this line to setup and install the btstack files 
 ./integrate_btstack.py 
+
+then use idf.py build in the src directory and use ./flash to flash the code to your ESP32 connected robot
