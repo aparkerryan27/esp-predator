@@ -174,6 +174,32 @@ esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s"
 	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/parker/esp/esp-idf/components/protocomm/src/transports/protocomm_httpd.c -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s
 
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj: /home/parker/esp/esp-idf/components/protocomm/src/simple_ble/simple_ble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj"
+	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj   -c /home/parker/esp/esp-idf/components/protocomm/src/simple_ble/simple_ble.c
+
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.i"
+	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/parker/esp/esp-idf/components/protocomm/src/simple_ble/simple_ble.c > CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.i
+
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.s"
+	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/parker/esp/esp-idf/components/protocomm/src/simple_ble/simple_ble.c -o CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.s
+
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj: /home/parker/esp/esp-idf/components/protocomm/src/transports/protocomm_ble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj"
+	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj   -c /home/parker/esp/esp-idf/components/protocomm/src/transports/protocomm_ble.c
+
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.i"
+	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/parker/esp/esp-idf/components/protocomm/src/transports/protocomm_ble.c > CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.i
+
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.s"
+	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/parker/esp/esp-idf/components/protocomm/src/transports/protocomm_ble.c -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.s
+
 # Object files for target __idf_protocomm
 __idf_protocomm_OBJECTS = \
 "CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj" \
@@ -184,7 +210,9 @@ __idf_protocomm_OBJECTS = \
 "CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj" \
 "CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj" \
 "CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj" \
-"CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj"
+"CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj" \
+"CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj" \
+"CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj"
 
 # External object files for target __idf_protocomm
 __idf_protocomm_EXTERNAL_OBJECTS =
@@ -198,9 +226,11 @@ esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.d
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
+esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/simple_ble/simple_ble.c.obj
+esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_ble.c.obj
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libprotocomm.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libprotocomm.a"
 	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_protocomm.dir/cmake_clean_target.cmake
 	cd /home/parker/esp/robot/src/build/esp-idf/protocomm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_protocomm.dir/link.txt --verbose=$(VERBOSE)
 

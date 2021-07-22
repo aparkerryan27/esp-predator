@@ -157,6 +157,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+esp-idf/app_update/CMakeFiles/read_otadata.dir/rule:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f CMakeFiles/Makefile2 esp-idf/app_update/CMakeFiles/read_otadata.dir/rule
+.PHONY : esp-idf/app_update/CMakeFiles/read_otadata.dir/rule
+
+# Convenience name for target.
+read_otadata: esp-idf/app_update/CMakeFiles/read_otadata.dir/rule
+
+.PHONY : read_otadata
+
+# fast build rule for target.
+read_otadata/fast:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/app_update/CMakeFiles/read_otadata.dir/build.make esp-idf/app_update/CMakeFiles/read_otadata.dir/build
+.PHONY : read_otadata/fast
+
+# Convenience name for target.
+esp-idf/app_update/CMakeFiles/erase_otadata.dir/rule:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f CMakeFiles/Makefile2 esp-idf/app_update/CMakeFiles/erase_otadata.dir/rule
+.PHONY : esp-idf/app_update/CMakeFiles/erase_otadata.dir/rule
+
+# Convenience name for target.
+erase_otadata: esp-idf/app_update/CMakeFiles/erase_otadata.dir/rule
+
+.PHONY : erase_otadata
+
+# fast build rule for target.
+erase_otadata/fast:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/app_update/CMakeFiles/erase_otadata.dir/build.make esp-idf/app_update/CMakeFiles/erase_otadata.dir/build
+.PHONY : erase_otadata/fast
+
+# Convenience name for target.
+esp-idf/app_update/CMakeFiles/blank_ota_data.dir/rule:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f CMakeFiles/Makefile2 esp-idf/app_update/CMakeFiles/blank_ota_data.dir/rule
+.PHONY : esp-idf/app_update/CMakeFiles/blank_ota_data.dir/rule
+
+# Convenience name for target.
+blank_ota_data: esp-idf/app_update/CMakeFiles/blank_ota_data.dir/rule
+
+.PHONY : blank_ota_data
+
+# fast build rule for target.
+blank_ota_data/fast:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/app_update/CMakeFiles/blank_ota_data.dir/build.make esp-idf/app_update/CMakeFiles/blank_ota_data.dir/build
+.PHONY : blank_ota_data/fast
+
+# Convenience name for target.
 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/rule:
 	cd /home/parker/esp/robot/src/build && $(MAKE) -f CMakeFiles/Makefile2 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/rule
 .PHONY : esp-idf/app_update/CMakeFiles/__idf_app_update.dir/rule
@@ -237,6 +282,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... read_otadata"
+	@echo "... erase_otadata"
+	@echo "... blank_ota_data"
 	@echo "... __idf_app_update"
 	@echo "... esp_app_desc.obj"
 	@echo "... esp_app_desc.i"

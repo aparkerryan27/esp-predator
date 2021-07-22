@@ -252,6 +252,33 @@ src/esp_local_ctrl_handler.c.s:
 	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.s
 .PHONY : src/esp_local_ctrl_handler.c.s
 
+src/esp_local_ctrl_transport_ble.obj: src/esp_local_ctrl_transport_ble.c.obj
+
+.PHONY : src/esp_local_ctrl_transport_ble.obj
+
+# target to build an object file
+src/esp_local_ctrl_transport_ble.c.obj:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj
+.PHONY : src/esp_local_ctrl_transport_ble.c.obj
+
+src/esp_local_ctrl_transport_ble.i: src/esp_local_ctrl_transport_ble.c.i
+
+.PHONY : src/esp_local_ctrl_transport_ble.i
+
+# target to preprocess a source file
+src/esp_local_ctrl_transport_ble.c.i:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.i
+.PHONY : src/esp_local_ctrl_transport_ble.c.i
+
+src/esp_local_ctrl_transport_ble.s: src/esp_local_ctrl_transport_ble.c.s
+
+.PHONY : src/esp_local_ctrl_transport_ble.s
+
+# target to generate assembly for a file
+src/esp_local_ctrl_transport_ble.c.s:
+	cd /home/parker/esp/robot/src/build && $(MAKE) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.s
+.PHONY : src/esp_local_ctrl_transport_ble.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -274,6 +301,9 @@ help:
 	@echo "... src/esp_local_ctrl_handler.obj"
 	@echo "... src/esp_local_ctrl_handler.i"
 	@echo "... src/esp_local_ctrl_handler.s"
+	@echo "... src/esp_local_ctrl_transport_ble.obj"
+	@echo "... src/esp_local_ctrl_transport_ble.i"
+	@echo "... src/esp_local_ctrl_transport_ble.s"
 .PHONY : help
 
 

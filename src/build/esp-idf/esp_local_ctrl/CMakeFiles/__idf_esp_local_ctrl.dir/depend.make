@@ -50,3 +50,21 @@ esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_ha
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj: /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj: config/sdkconfig.h
 
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_common/include/esp_assert.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_common/include/esp_bit_defs.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_common/include/esp_compiler.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_common/include/esp_err.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_local_ctrl/include/esp_local_ctrl.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_priv.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_transport_ble.c
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/esp_rom/include/esp32s2beta/rom/ets_sys.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/log/include/esp_log.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/log/include/esp_log_internal.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/newlib/platform_include/assert.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/protocomm/include/common/protocomm.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/protocomm/include/security/protocomm_security.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/protocomm/include/transports/protocomm_ble.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj: config/sdkconfig.h
+

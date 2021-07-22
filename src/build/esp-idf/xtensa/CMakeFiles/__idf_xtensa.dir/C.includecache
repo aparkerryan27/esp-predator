@@ -492,12 +492,6 @@ esp32/rom/ets_sys.h
 esp32s2beta/rom/ets_sys.h
 /home/parker/esp/esp-idf/components/xtensa/esp32s2beta/rom/ets_sys.h
 
-/home/parker/esp/esp-idf/components/xtensa/eri.c
-stdint.h
--
-eri.h
-/home/parker/esp/esp-idf/components/xtensa/eri.h
-
 /home/parker/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
 
 /home/parker/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h

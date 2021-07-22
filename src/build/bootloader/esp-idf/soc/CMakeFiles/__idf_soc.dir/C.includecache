@@ -120,10 +120,6 @@ esp_log_internal.h
 
 /home/parker/esp/esp-idf/components/log/include/esp_log_internal.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/adc_periph.c
-soc/adc_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/adc_periph.h
-
 /home/parker/esp/esp-idf/components/soc/esp32/cpu_util.c
 esp_attr.h
 /home/parker/esp/esp-idf/components/soc/esp32/esp_attr.h
@@ -136,43 +132,15 @@ soc/rtc_periph.h
 sdkconfig.h
 /home/parker/esp/esp-idf/components/soc/esp32/sdkconfig.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/dac_periph.c
-soc/dac_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/dac_periph.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/gpio_periph.c
-soc/gpio_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/gpio_periph.h
-
 /home/parker/esp/esp-idf/components/soc/esp32/i2c_apll.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/i2c_bbpll.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/i2c_periph.c
-soc/i2c_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/i2c_periph.h
-soc/gpio_sig_map.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/gpio_sig_map.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/i2c_rtc_clk.h
 i2c_apll.h
 /home/parker/esp/esp-idf/components/soc/esp32/i2c_apll.h
 i2c_bbpll.h
 /home/parker/esp/esp-idf/components/soc/esp32/i2c_bbpll.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/i2s_periph.c
-soc/i2s_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/i2s_periph.h
-soc/gpio_sig_map.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/gpio_sig_map.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/adc_ll.h
-soc/adc_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/adc_periph.h
-hal/adc_types.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/adc_types.h
-stdbool.h
--
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/can_ll.h
 stdint.h
@@ -205,12 +173,6 @@ soc/rtc_io_reg.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/rtc_io_reg.h
 hal/gpio_types.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/gpio_types.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/i2c_ll.h
-soc/i2c_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/i2c_periph.h
-hal/i2c_types.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/i2c_types.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/i2s_ll.h
 stdbool.h
@@ -245,36 +207,6 @@ hal/hal_defs.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/hal_defs.h
 esp_types.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/esp_types.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/pcnt_ll.h
-soc/pcnt_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/pcnt_periph.h
-hal/pcnt_types.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/pcnt_types.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/rmt_ll.h
-stdbool.h
--
-soc/rmt_struct.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/rmt_struct.h
-soc/rmt_caps.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/rmt_caps.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/rtc_io_ll.h
-stdlib.h
--
-soc/rtc_io_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/rtc_io_periph.h
-hal/rtc_io_types.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/rtc_io_types.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/sigmadelta_ll.h
-stdbool.h
--
-soc/sigmadelta_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/sigmadelta_periph.h
-hal/sigmadelta_types.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/sigmadelta_types.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/spi_flash_ll.h
 stdlib.h
@@ -338,10 +270,6 @@ soc/uart_periph.h
 esp_attr.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/esp_attr.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/adc_caps.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/apb_ctrl_reg.h
 soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
@@ -404,23 +332,11 @@ soc/soc.h
 soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/gpio_sd_reg.h
-soc.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/gpio_sd_struct.h
-stdint.h
--
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h
 stdint.h
 -
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/hinf_reg.h
-soc.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/hinf_struct.h
 stdint.h
@@ -431,16 +347,6 @@ soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/host_struct.h
-stdint.h
--
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/i2c_caps.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/i2c_reg.h
-soc.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/i2c_struct.h
 stdint.h
 -
 
@@ -482,25 +388,7 @@ stdint.h
 soc/soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc/soc.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/pcnt_caps.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/pcnt_reg.h
-soc.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h
-stdint.h
--
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/rmt_caps.h
-stdint.h
--
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/rmt_struct.h
-stdint.h
--
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/rtc.h
 stdbool.h
@@ -534,20 +422,6 @@ soc.h
 stdint.h
 -
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/sdio_slave_pins.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_pins.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_reg.h
-soc.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h
-stdint.h
--
-stdint.h
--
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h
 soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/soc.h
@@ -555,8 +429,6 @@ soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/sens_struct.h
 stdint.h
 -
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/sigmadelta_caps.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/slc_reg.h
 soc.h
@@ -584,10 +456,6 @@ soc.h
 stdint.h
 -
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/syscon_struct.h
-stdint.h
--
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/timer_group_caps.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h
@@ -611,16 +479,6 @@ soc.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h
 stdint.h
 -
-
-/home/parker/esp/esp-idf/components/soc/esp32/interrupts.c
-soc/interrupts.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/interrupts.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/ledc_periph.c
-soc/ledc_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/ledc_periph.h
-soc/gpio_sig_map.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/gpio_sig_map.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/rtc_clk.c
 stdbool.h
@@ -718,20 +576,6 @@ soc/efuse_periph.h
 soc/gpio_periph.h
 /home/parker/esp/esp-idf/components/soc/esp32/soc/gpio_periph.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/rtc_io_periph.c
-soc/rtc_io_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/rtc_io_periph.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/rtc_periph.c
-
-/home/parker/esp/esp-idf/components/soc/esp32/rtc_pm.c
-stdint.h
--
-assert.h
--
-soc/rtc.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/rtc.h
-
 /home/parker/esp/esp-idf/components/soc/esp32/rtc_sleep.c
 stdint.h
 -
@@ -770,24 +614,6 @@ soc/timer_periph.h
 soc_log.h
 /home/parker/esp/esp-idf/components/soc/esp32/soc_log.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/rtc_wdt.c
-soc/rtc_wdt.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/rtc_wdt.h
-soc/rtc.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/rtc.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/sdio_slave_periph.c
-stdint.h
--
-soc/sdio_slave_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/sdio_slave_periph.h
-soc/gpio_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/gpio_periph.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/sdmmc_periph.c
-soc/sdmmc_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/sdmmc_periph.h
-
 /home/parker/esp/esp-idf/components/soc/esp32/soc_log.h
 esp_log.h
 /home/parker/esp/esp-idf/components/soc/esp32/esp_log.h
@@ -817,22 +643,6 @@ hal/touch_sensor_hal.h
 /home/parker/esp/esp-idf/components/soc/esp32/hal/touch_sensor_hal.h
 hal/touch_sensor_types.h
 /home/parker/esp/esp-idf/components/soc/esp32/hal/touch_sensor_types.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/touch_sensor_periph.c
-soc/touch_sensor_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/touch_sensor_periph.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/uart_periph.c
-soc/uart_periph.h
-/home/parker/esp/esp-idf/components/soc/esp32/soc/uart_periph.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/adc_hal.h
-hal/adc_types.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/adc_types.h
-hal/adc_ll.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/adc_ll.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/adc_types.h
 
 /home/parker/esp/esp-idf/components/soc/include/hal/can_hal.h
 stddef.h
@@ -892,20 +702,6 @@ soc/gpio_caps.h
 esp_log.h
 /home/parker/esp/esp-idf/components/soc/include/hal/esp_log.h
 
-/home/parker/esp/esp-idf/components/soc/include/hal/i2c_hal.h
-hal/i2c_ll.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/i2c_ll.h
-hal/i2c_types.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/i2c_types.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/i2c_types.h
-stdint.h
--
-stdbool.h
--
-soc/i2c_caps.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/i2c_caps.h
-
 /home/parker/esp/esp-idf/components/soc/include/hal/i2s_hal.h
 soc/i2s_periph.h
 /home/parker/esp/esp-idf/components/soc/include/hal/soc/i2s_periph.h
@@ -948,32 +744,6 @@ hal/mcpwm_ll.h
 
 /home/parker/esp/esp-idf/components/soc/include/hal/mcpwm_types.h
 
-/home/parker/esp/esp-idf/components/soc/include/hal/pcnt_hal.h
-stdio.h
--
-soc/pcnt_periph.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/pcnt_periph.h
-hal/pcnt_types.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/pcnt_types.h
-hal/pcnt_ll.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/pcnt_ll.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/pcnt_types.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/rmt_hal.h
-soc/rmt_struct.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/rmt_struct.h
-soc/rmt_caps.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/rmt_caps.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/rtc_io_hal.h
-hal/rtc_io_ll.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/rtc_io_ll.h
-esp_err.h
--
-
-/home/parker/esp/esp-idf/components/soc/include/hal/rtc_io_types.h
-
 /home/parker/esp/esp-idf/components/soc/include/hal/sdio_slave_hal.h
 esp_err.h
 -
@@ -1003,18 +773,6 @@ soc/lldesc.h
 /home/parker/esp/esp-idf/components/soc/include/hal/sdio_slave_types.h
 soc/soc.h
 /home/parker/esp/esp-idf/components/soc/include/hal/soc/soc.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/sigmadelta_hal.h
-soc/sigmadelta_periph.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/sigmadelta_periph.h
-hal/sigmadelta_types.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/sigmadelta_types.h
-hal/sigmadelta_ll.h
-/home/parker/esp/esp-idf/components/soc/include/hal/hal/sigmadelta_ll.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/sigmadelta_types.h
-soc/sigmadelta_caps.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/sigmadelta_caps.h
 
 /home/parker/esp/esp-idf/components/soc/include/hal/spi_flash_hal.h
 hal/spi_flash_ll.h
@@ -1104,24 +862,6 @@ stdbool.h
 soc/uart_caps.h
 /home/parker/esp/esp-idf/components/soc/include/hal/soc/uart_caps.h
 
-/home/parker/esp/esp-idf/components/soc/include/soc/adc_periph.h
-soc/soc.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/soc.h
-soc/syscon_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/syscon_struct.h
-soc/sens_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/sens_reg.h
-soc/sens_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/sens_struct.h
-soc/rtc_io_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/rtc_io_struct.h
-soc/rtc_cntl_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/rtc_cntl_struct.h
-soc/adc_channel.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/adc_channel.h
-soc/adc_caps.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/adc_caps.h
-
 /home/parker/esp/esp-idf/components/soc/include/soc/can_periph.h
 sdkconfig.h
 /home/parker/esp/esp-idf/components/soc/include/soc/sdkconfig.h
@@ -1164,16 +904,6 @@ soc/gpio_caps.h
 soc/gpio_sig_map.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/gpio_sig_map.h
 
-/home/parker/esp/esp-idf/components/soc/include/soc/i2c_periph.h
-soc/i2c_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/i2c_reg.h
-soc/i2c_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/i2c_struct.h
-soc/i2c_caps.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/i2c_caps.h
-soc/periph_defs.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/periph_defs.h
-
 /home/parker/esp/esp-idf/components/soc/include/soc/i2s_periph.h
 soc/soc.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/soc.h
@@ -1185,12 +915,6 @@ soc/i2s_reg.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/i2s_reg.h
 soc/i2s_caps.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/i2s_caps.h
-
-/home/parker/esp/esp-idf/components/soc/include/soc/interrupts.h
-stdint.h
-/home/parker/esp/esp-idf/components/soc/include/soc/stdint.h
-soc/soc.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/soc.h
 
 /home/parker/esp/esp-idf/components/soc/include/soc/ledc_periph.h
 soc/ledc_reg.h
@@ -1215,14 +939,6 @@ soc/mcpwm_reg.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/mcpwm_reg.h
 soc/mcpwm_struct.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/mcpwm_struct.h
-
-/home/parker/esp/esp-idf/components/soc/include/soc/pcnt_periph.h
-soc/pcnt_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/pcnt_reg.h
-soc/pcnt_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/pcnt_struct.h
-soc/pcnt_caps.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/pcnt_caps.h
 
 /home/parker/esp/esp-idf/components/soc/include/soc/rtc_io_periph.h
 soc/soc.h
@@ -1250,57 +966,11 @@ rtc_io_periph.h
 soc/gpio_caps.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/gpio_caps.h
 
-/home/parker/esp/esp-idf/components/soc/include/soc/rtc_wdt.h
-stdint.h
--
-stdbool.h
--
-soc/rtc_periph.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/rtc_periph.h
-esp_err.h
-/home/parker/esp/esp-idf/components/soc/include/soc/esp_err.h
-
-/home/parker/esp/esp-idf/components/soc/include/soc/sdio_slave_periph.h
-stdint.h
--
-soc/sdio_slave_pins.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/sdio_slave_pins.h
-soc/slc_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/slc_reg.h
-soc/slc_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/slc_struct.h
-soc/host_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/host_reg.h
-soc/host_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/host_struct.h
-soc/hinf_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/hinf_reg.h
-soc/hinf_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/hinf_struct.h
-
-/home/parker/esp/esp-idf/components/soc/include/soc/sdmmc_periph.h
-stdint.h
--
-soc/sdmmc_pins.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/sdmmc_pins.h
-soc/sdmmc_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/sdmmc_reg.h
-soc/sdmmc_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/sdmmc_struct.h
-soc/gpio_sig_map.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/gpio_sig_map.h
-
 /home/parker/esp/esp-idf/components/soc/include/soc/sens_periph.h
 soc/sens_reg.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/sens_reg.h
 soc/sens_struct.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/sens_struct.h
-
-/home/parker/esp/esp-idf/components/soc/include/soc/sigmadelta_periph.h
-soc/gpio_sd_struct.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/gpio_sd_struct.h
-soc/gpio_sd_reg.h
-/home/parker/esp/esp-idf/components/soc/include/soc/soc/gpio_sd_reg.h
 
 /home/parker/esp/esp-idf/components/soc/include/soc/soc_memory_layout.h
 stdlib.h
@@ -1372,10 +1042,6 @@ soc/periph_defs.h
 soc/gpio_sig_map.h
 /home/parker/esp/esp-idf/components/soc/include/soc/soc/gpio_sig_map.h
 
-/home/parker/esp/esp-idf/components/soc/src/hal/adc_hal.c
-hal/adc_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/adc_hal.h
-
 /home/parker/esp/esp-idf/components/soc/src/hal/can_hal.c
 stddef.h
 -
@@ -1402,14 +1068,6 @@ hal/gpio_hal.h
 esp32/rom/gpio.h
 /home/parker/esp/esp-idf/components/soc/src/hal/esp32/rom/gpio.h
 
-/home/parker/esp/esp-idf/components/soc/src/hal/i2c_hal.c
-hal/i2c_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/i2c_hal.h
-
-/home/parker/esp/esp-idf/components/soc/src/hal/i2c_hal_iram.c
-hal/i2c_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/i2c_hal.h
-
 /home/parker/esp/esp-idf/components/soc/src/hal/i2s_hal.c
 soc/soc.h
 /home/parker/esp/esp-idf/components/soc/src/hal/soc/soc.h
@@ -1434,20 +1092,6 @@ hal/ledc_hal.h
 hal/mcpwm_hal.h
 /home/parker/esp/esp-idf/components/soc/src/hal/hal/mcpwm_hal.h
 
-/home/parker/esp/esp-idf/components/soc/src/hal/pcnt_hal.c
-hal/pcnt_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/pcnt_hal.h
-
-/home/parker/esp/esp-idf/components/soc/src/hal/rmt_hal.c
-hal/rmt_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/rmt_hal.h
-hal/rmt_ll.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/rmt_ll.h
-
-/home/parker/esp/esp-idf/components/soc/src/hal/rtc_io_hal.c
-hal/rtc_io_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/rtc_io_hal.h
-
 /home/parker/esp/esp-idf/components/soc/src/hal/sdio_slave_hal.c
 soc/slc_struct.h
 -
@@ -1465,14 +1109,6 @@ hal/hal_defs.h
 /home/parker/esp/esp-idf/components/soc/src/hal/hal/hal_defs.h
 esp_attr.h
 /home/parker/esp/esp-idf/components/soc/src/hal/esp_attr.h
-
-/home/parker/esp/esp-idf/components/soc/src/hal/sigmadelta_hal.c
-stdio.h
--
-soc/soc.h
-/home/parker/esp/esp-idf/components/soc/src/hal/soc/soc.h
-hal/sigmadelta_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/sigmadelta_hal.h
 
 /home/parker/esp/esp-idf/components/soc/src/hal/spi_flash_hal.c
 stdlib.h

@@ -72,7 +72,7 @@
 #define MAX_ATTRIBUTE_VALUE_SIZE 512  // Apparently PS4 has a 470-bytes report
 #define L2CAP_CHANNEL_MTU 128         // PS4 requires a 79-byte packet
 
-#define GAMEPAD_ADDRESS "08:3A:F2:6C:FF:DA" //"E4:17:D8:97:EA:66"
+#define GAMEPAD_ADDRESS "08:3A:F2:6C:FF:DA" //btstack demo //"08:3A:F2:6C:FF:DA"//replaced gamepad with bt emulator MAC. was "E4:17:D8:97:EA:66"
 
 
 // globals
@@ -403,7 +403,7 @@ static void packet_handler(uint8_t packet_type, uint16_t channel,
 
         // GAP EVENTS
         case GAP_EVENT_INQUIRY_RESULT:
-          // logi("--> GAP_EVENT_INQUIRY_RESULT\n");
+          //logd("--> GAP_EVENT_INQUIRY_RESULT\n");
           on_gap_inquiry_result(channel, packet, size);
           break;
         case GAP_EVENT_INQUIRY_COMPLETE:
@@ -507,14 +507,14 @@ static void on_gap_inquiry_result(uint16_t channel, uint8_t* packet,
   uint16_t clock_offset = gap_event_inquiry_result_get_clock_offset(packet);
   uint32_t cod = gap_event_inquiry_result_get_class_of_device(packet);
 
-  if (strcmp(GAMEPAD_ADDRESS,bd_addr_to_str(addr))) return;
+  if (strcmp(GAMEPAD_ADDRESS,bd_addr_to_str(addr))) return; //TODO: - get more clear log data out of this than just repeating shit over and over
 
   logi("Device found: %s ", bd_addr_to_str(addr));
-  logi("with COD: 0x%06x, ", (unsigned int)cod);
-  logi("pageScan %d, ", page_scan_repetition_mode);
-  logi("clock offset 0x%04x", clock_offset);
+  //logi("with COD: 0x%06x, ", (unsigned int)cod);
+  //logi("pageScan %d, ", page_scan_repetition_mode);
+  //logi("clock offset 0x%04x", clock_offset);
   if (gap_event_inquiry_result_get_rssi_available(packet)) {
-    logi(", rssi %d dBm", (int8_t)gap_event_inquiry_result_get_rssi(packet));
+    //logi(", rssi %d dBm", (int8_t)gap_event_inquiry_result_get_rssi(packet));
   }
   if (gap_event_inquiry_result_get_name_available(packet)) {
     name_len = btstack_min(NAME_LEN_MAX - 1,

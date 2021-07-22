@@ -20,13 +20,13 @@ int uni_main(int argc, const char** argv) {
   logi("Version: v2.0.0\n\n");
 
   //Creates a new instance of the ESP-NETIF layer for handling events
-  ESP_ERROR_CHECK(esp_netif_init());
+  //ESP_ERROR_CHECK(esp_netif_init());
   //ESP_ERROR_CHECK is just an assert that converts any
   //  error throws into filenames and line numbers
 
   //The event loop library allows components to declare events
   //   to which other components can register handlers
-  ESP_ERROR_CHECK(esp_event_loop_create_default());
+  //ESP_ERROR_CHECK(esp_event_loop_create_default());
   
   //logi("....connecting to wifi...\n");
   //ESP_ERROR_CHECK(wifi_connect());
@@ -39,9 +39,9 @@ int uni_main(int argc, const char** argv) {
   logi("....setting up h/w interface...\n");
   uni_platform_init(argc, argv);
 
-  //logi("....connecting to bluetooth...\n");
+  logi("....connecting to bluetooth...\n");
   // Human Interface Device setup
-  uni_hid_device_init(); 
+  uni_hid_device_init();  // the bt emulator controller MAC "08:3A:F2:6C:FF:DA"
   // bluetooth setup.
   uni_bluetooth_init(); 
   // BTStack loop (accept data forever)

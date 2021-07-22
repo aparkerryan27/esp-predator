@@ -233,6 +233,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/parker/esp/esp-idf/components/mbedtls/mbedtls/include"
   "/home/parker/esp/esp-idf/components/bt/include"
   "/home/parker/esp/esp-idf/components/bt/common/osi/include"
+  "/home/parker/esp/esp-idf/components/bt/host/bluedroid/api/include/api"
   )
 
 # Targets to which this target links.

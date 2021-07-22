@@ -80,6 +80,22 @@ protocomm.h
 esp_local_ctrl.h
 -
 
+/home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_transport_ble.c
+stdio.h
+-
+string.h
+-
+esp_err.h
+-
+esp_log.h
+-
+protocomm_ble.h
+-
+esp_local_ctrl.h
+-
+esp_local_ctrl_priv.h
+/home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_priv.h
+
 /home/parker/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h
 stdint.h
 -
@@ -146,6 +162,10 @@ esp_err.h
 
 /home/parker/esp/esp-idf/components/protocomm/include/security/protocomm_security0.h
 protocomm_security.h
+-
+
+/home/parker/esp/esp-idf/components/protocomm/include/transports/protocomm_ble.h
+protocomm.h
 -
 
 /home/parker/esp/esp-idf/components/protocomm/proto-c/constants.pb-c.h

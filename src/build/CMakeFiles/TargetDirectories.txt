@@ -53,6 +53,9 @@
 /home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/list_install_components.dir
 /home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/rebuild_cache.dir
 /home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/edit_cache.dir
+/home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/read_otadata.dir
+/home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/erase_otadata.dir
+/home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/blank_ota_data.dir
 /home/parker/esp/robot/src/build/esp-idf/app_update/CMakeFiles/__idf_app_update.dir
 /home/parker/esp/robot/src/build/esp-idf/spi_flash/CMakeFiles/install/strip.dir
 /home/parker/esp/robot/src/build/esp-idf/spi_flash/CMakeFiles/install/local.dir

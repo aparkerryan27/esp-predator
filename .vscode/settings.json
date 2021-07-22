@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "btstack.h": "c",
+        "stdint.h": "c",
+        "btstack_port_esp32.h": "c",
+        "uni_hid_parser.h": "c",
+        "uni_hid_device.h": "c"
+    }
+}

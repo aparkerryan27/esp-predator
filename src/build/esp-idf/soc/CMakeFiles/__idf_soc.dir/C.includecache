@@ -306,14 +306,6 @@ soc/pcnt_periph.h
 hal/pcnt_types.h
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/hal/pcnt_types.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/rmt_ll.h
-stdbool.h
--
-soc/rmt_struct.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/rmt_struct.h
-soc/rmt_caps.h
-/home/parker/esp/esp-idf/components/soc/esp32/include/hal/soc/rmt_caps.h
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/hal/rtc_io_ll.h
 stdlib.h
 -
@@ -560,14 +552,6 @@ stdint.h
 
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h
 
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/rmt_caps.h
-stdint.h
--
-
-/home/parker/esp/esp-idf/components/soc/esp32/include/soc/rmt_struct.h
-stdint.h
--
-
 /home/parker/esp/esp-idf/components/soc/esp32/include/soc/rtc.h
 stdbool.h
 -
@@ -787,8 +771,6 @@ soc/gpio_periph.h
 /home/parker/esp/esp-idf/components/soc/esp32/rtc_io_periph.c
 soc/rtc_io_periph.h
 /home/parker/esp/esp-idf/components/soc/esp32/soc/rtc_io_periph.h
-
-/home/parker/esp/esp-idf/components/soc/esp32/rtc_periph.c
 
 /home/parker/esp/esp-idf/components/soc/esp32/rtc_pm.c
 stdint.h
@@ -1025,12 +1007,6 @@ hal/pcnt_ll.h
 /home/parker/esp/esp-idf/components/soc/include/hal/hal/pcnt_ll.h
 
 /home/parker/esp/esp-idf/components/soc/include/hal/pcnt_types.h
-
-/home/parker/esp/esp-idf/components/soc/include/hal/rmt_hal.h
-soc/rmt_struct.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/rmt_struct.h
-soc/rmt_caps.h
-/home/parker/esp/esp-idf/components/soc/include/hal/soc/rmt_caps.h
 
 /home/parker/esp/esp-idf/components/soc/include/hal/rtc_io_hal.h
 hal/rtc_io_ll.h
@@ -1503,12 +1479,6 @@ hal/mcpwm_hal.h
 /home/parker/esp/esp-idf/components/soc/src/hal/pcnt_hal.c
 hal/pcnt_hal.h
 /home/parker/esp/esp-idf/components/soc/src/hal/hal/pcnt_hal.h
-
-/home/parker/esp/esp-idf/components/soc/src/hal/rmt_hal.c
-hal/rmt_hal.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/rmt_hal.h
-hal/rmt_ll.h
-/home/parker/esp/esp-idf/components/soc/src/hal/hal/rmt_ll.h
 
 /home/parker/esp/esp-idf/components/soc/src/hal/rtc_io_hal.c
 hal/rtc_io_hal.h

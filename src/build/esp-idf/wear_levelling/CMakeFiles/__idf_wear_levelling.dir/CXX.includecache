@@ -50,10 +50,6 @@ stdbool.h
 stddef.h
 -
 
-/home/parker/esp/esp-idf/components/esp_rom/include/esp32/rom/crc.h
-stdint.h
--
-
 /home/parker/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h
 stdint.h
 -
@@ -201,12 +197,6 @@ string.h
 -
 stddef.h
 -
-
-/home/parker/esp/esp-idf/components/wear_levelling/crc32.cpp
-crc32.h
-/home/parker/esp/esp-idf/components/wear_levelling/crc32.h
-esp32/rom/crc.h
-/home/parker/esp/esp-idf/components/wear_levelling/esp32/rom/crc.h
 
 /home/parker/esp/esp-idf/components/wear_levelling/crc32.h
 

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj"
   "CMakeFiles/__idf_wifi_provisioning.dir/src/handlers.c.obj"
   "CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj"
+  "CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj"
   "CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj"
   "CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_softap.c.obj"
   "CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_config.c.obj"

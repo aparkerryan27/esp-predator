@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/parker/esp/esp-idf/components/bt/include/esp_bt.h
+stdint.h
+-
+stdbool.h
+-
+esp_err.h
+/home/parker/esp/esp-idf/components/bt/include/esp_err.h
+sdkconfig.h
+/home/parker/esp/esp-idf/components/bt/include/sdkconfig.h
+esp_task.h
+/home/parker/esp/esp-idf/components/bt/include/esp_task.h
+
 /home/parker/esp/esp-idf/components/driver/include/driver/spi_common.h
 stdint.h
 -
@@ -760,6 +772,10 @@ protocomm_security.h
 protocomm_security.h
 -
 
+/home/parker/esp/esp-idf/components/protocomm/include/transports/protocomm_ble.h
+protocomm.h
+-
+
 /home/parker/esp/esp-idf/components/protocomm/include/transports/protocomm_console.h
 protocomm.h
 -
@@ -884,6 +900,14 @@ esp_event.h
 wifi_provisioning/wifi_config.h
 /home/parker/esp/esp-idf/components/wifi_provisioning/include/wifi_provisioning/wifi_provisioning/wifi_config.h
 
+/home/parker/esp/esp-idf/components/wifi_provisioning/include/wifi_provisioning/scheme_ble.h
+protocomm.h
+-
+protocomm_ble.h
+-
+wifi_provisioning/manager.h
+/home/parker/esp/esp-idf/components/wifi_provisioning/include/wifi_provisioning/wifi_provisioning/manager.h
+
 /home/parker/esp/esp-idf/components/wifi_provisioning/include/wifi_provisioning/scheme_console.h
 protocomm.h
 -
@@ -989,6 +1013,24 @@ protocomm_security0.h
 -
 protocomm_security1.h
 -
+wifi_provisioning_priv.h
+/home/parker/esp/esp-idf/components/wifi_provisioning/src/wifi_provisioning_priv.h
+
+/home/parker/esp/esp-idf/components/wifi_provisioning/src/scheme_ble.c
+string.h
+-
+esp_log.h
+-
+esp_err.h
+-
+esp_bt.h
+-
+protocomm.h
+-
+protocomm_ble.h
+-
+wifi_provisioning/scheme_ble.h
+/home/parker/esp/esp-idf/components/wifi_provisioning/src/wifi_provisioning/scheme_ble.h
 wifi_provisioning_priv.h
 /home/parker/esp/esp-idf/components/wifi_provisioning/src/wifi_provisioning_priv.h
 

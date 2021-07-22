@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/parker/esp/esp-idf/components/esp_local_ctrl/proto-c/esp_local_ctrl.pb-c.c" "/home/parker/esp/robot/src/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj"
   "/home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl.c" "/home/parker/esp/robot/src/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj"
   "/home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_handler.c" "/home/parker/esp/robot/src/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj"
+  "/home/parker/esp/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_transport_ble.c" "/home/parker/esp/robot/src/build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -58,6 +59,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/parker/esp/esp-idf/components/protocomm/include/transports"
   "/home/parker/esp/esp-idf/components/bt/include"
   "/home/parker/esp/esp-idf/components/bt/common/osi/include"
+  "/home/parker/esp/esp-idf/components/bt/host/bluedroid/api/include/api"
   "/home/parker/esp/esp-idf/components/nvs_flash/include"
   "/home/parker/esp/esp-idf/components/spi_flash/include"
   "/home/parker/esp/esp-idf/components/mbedtls/port/include"

@@ -23,6 +23,9 @@ dae9d5acbfed10faae93f37debbc3e7f bootloader-prefix/src/bootloader-stamp/bootload
 dc68380d1264aa671d245704ef2f7c9a bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
 4b9a297a9209bfc50031babb0db242c2 bootloader-prefix/src/bootloader-stamp/bootloader-patch
 2b11c107f241a511c751abff572dec1d bootloader-prefix/src/bootloader-stamp/bootloader-update
+7bd9ea8c9d88d0f20d8f02d2b165ea84 esp-idf/app_update/CMakeFiles/blank_ota_data
+2a3c24cf290e73a7f412dd49198865c5 esp-idf/app_update/CMakeFiles/erase_otadata
+c19f9ec03cee417e14ecce1f0a8667c1 esp-idf/app_update/CMakeFiles/read_otadata
 b503c6b61ad5dad9875dd919df83cd75 esp-idf/bootloader/CMakeFiles/bootloader-flash
 6ea1e5fbd7150cfb251243156bbceb06 esp-idf/efuse/CMakeFiles/efuse_common_table
 a11f619abda5c9480ee45fdda307f40d esp-idf/efuse/CMakeFiles/efuse_test_table
@@ -34,5 +37,6 @@ bf78c72a5042fd7b9a2bc7cc74b6eb64 esp-idf/esp32/ld/esp32.project.ld
 a26fddbadf5510f256f6ba1a2fe943e3 esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc
 8bb7d3ec8cc12172efa090f4ab501426 esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib
 8a638e4111903201906cdc18f33d01f7 esp-idf/partition_table/CMakeFiles/partition_table
-cec6fe63a9a3d567d74b80e969582eb7 partition_table/partition-table.bin
+262077e1dcda0f0ae41339a50b47bdf2 ota_data_initial.bin
+41d4fc089d13442c76ef254aa8302fa3 partition_table/partition-table.bin
 d7fefe9f0929bee3fbac5b60637636c0 project_elf_src.c

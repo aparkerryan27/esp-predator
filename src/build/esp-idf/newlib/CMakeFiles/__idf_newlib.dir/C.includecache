@@ -652,18 +652,6 @@ lwip/arch.h
 
 /home/parker/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h
 
-/home/parker/esp/esp-idf/components/newlib/heap.c
-string.h
--
-stdlib.h
--
-sys/reent.h
--
-malloc.h
--
-esp_heap_caps.h
-/home/parker/esp/esp-idf/components/newlib/esp_heap_caps.h
-
 /home/parker/esp/esp-idf/components/newlib/locks.c
 sys/lock.h
 -
@@ -833,26 +821,6 @@ esp_newlib.h
 /home/parker/esp/esp-idf/components/newlib/esp_newlib.h
 sdkconfig.h
 /home/parker/esp/esp-idf/components/newlib/sdkconfig.h
-
-/home/parker/esp/esp-idf/components/newlib/syscalls.c
-string.h
--
-stdbool.h
--
-stdlib.h
--
-stdarg.h
--
-sys/types.h
--
-unistd.h
--
-errno.h
--
-reent.h
--
-sys/fcntl.h
--
 
 /home/parker/esp/esp-idf/components/newlib/termios.c
 sdkconfig.h

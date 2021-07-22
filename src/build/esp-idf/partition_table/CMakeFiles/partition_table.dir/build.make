@@ -60,10 +60,10 @@ esp-idf/partition_table/CMakeFiles/partition_table: partition_table/partition-ta
 	cd /home/parker/esp/robot/src/build/esp-idf/partition_table && /home/parker/.espressif/python_env/idf4.1_py3.9_env/bin/python /home/parker/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB /home/parker/esp/robot/src/build/partition_table/partition-table.bin
 	cd /home/parker/esp/robot/src/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
 
-partition_table/partition-table.bin: /home/parker/esp/esp-idf/components/partition_table/partitions_singleapp.csv
+partition_table/partition-table.bin: /home/parker/esp/esp-idf/components/partition_table/partitions_two_ota.csv
 partition_table/partition-table.bin: /home/parker/esp/esp-idf/components/partition_table/gen_esp32part.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
-	cd /home/parker/esp/robot/src/build/esp-idf/partition_table && /home/parker/.espressif/python_env/idf4.1_py3.9_env/bin/python /home/parker/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB /home/parker/esp/esp-idf/components/partition_table/partitions_singleapp.csv /home/parker/esp/robot/src/build/partition_table/partition-table.bin
+	cd /home/parker/esp/robot/src/build/esp-idf/partition_table && /home/parker/.espressif/python_env/idf4.1_py3.9_env/bin/python /home/parker/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB /home/parker/esp/esp-idf/components/partition_table/partitions_two_ota.csv /home/parker/esp/robot/src/build/partition_table/partition-table.bin
 
 partition_table: esp-idf/partition_table/CMakeFiles/partition_table
 partition_table: partition_table/partition-table.bin

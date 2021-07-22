@@ -78,6 +78,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/parker/esp/esp-idf/components/asio/port/include"
   "/home/parker/esp/esp-idf/components/bt/include"
   "/home/parker/esp/esp-idf/components/bt/common/osi/include"
+  "/home/parker/esp/esp-idf/components/bt/host/bluedroid/api/include/api"
   "/home/parker/esp/esp-idf/components/btstack/3rd-party/bluedroid/decoder/include"
   "/home/parker/esp/esp-idf/components/btstack/3rd-party/bluedroid/encoder/include"
   "/home/parker/esp/esp-idf/components/btstack/3rd-party/hxcmod-player"

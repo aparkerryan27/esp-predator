@@ -174,6 +174,19 @@ esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_co
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.s"
 	cd /home/parker/esp/robot/src/build/esp-idf/wifi_provisioning && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/parker/esp/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.c -o CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.s
 
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/flags.make
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj: /home/parker/esp/esp-idf/components/wifi_provisioning/src/scheme_ble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj"
+	cd /home/parker/esp/robot/src/build/esp-idf/wifi_provisioning && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj   -c /home/parker/esp/esp-idf/components/wifi_provisioning/src/scheme_ble.c
+
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.i"
+	cd /home/parker/esp/robot/src/build/esp-idf/wifi_provisioning && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/parker/esp/esp-idf/components/wifi_provisioning/src/scheme_ble.c > CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.i
+
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.s"
+	cd /home/parker/esp/robot/src/build/esp-idf/wifi_provisioning && /home/parker/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/parker/esp/esp-idf/components/wifi_provisioning/src/scheme_ble.c -o CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.s
+
 # Object files for target __idf_wifi_provisioning
 __idf_wifi_provisioning_OBJECTS = \
 "CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_config.c.obj" \
@@ -184,7 +197,8 @@ __idf_wifi_provisioning_OBJECTS = \
 "CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj" \
 "CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj" \
 "CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj" \
-"CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj"
+"CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj" \
+"CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj"
 
 # External object files for target __idf_wifi_provisioning
 __idf_wifi_provisioning_EXTERNAL_OBJECTS =
@@ -198,9 +212,10 @@ esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMak
 esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj
 esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj
 esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj
+esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj
 esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make
 esp-idf/wifi_provisioning/libwifi_provisioning.a: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libwifi_provisioning.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parker/esp/robot/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libwifi_provisioning.a"
 	cd /home/parker/esp/robot/src/build/esp-idf/wifi_provisioning && $(CMAKE_COMMAND) -P CMakeFiles/__idf_wifi_provisioning.dir/cmake_clean_target.cmake
 	cd /home/parker/esp/robot/src/build/esp-idf/wifi_provisioning && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_wifi_provisioning.dir/link.txt --verbose=$(VERBOSE)
 

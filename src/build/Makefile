@@ -404,6 +404,45 @@ partition_table/fast:
 .PHONY : partition_table/fast
 
 #=============================================================================
+# Target rules for targets named read_otadata
+
+# Build rule for target.
+read_otadata: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read_otadata
+.PHONY : read_otadata
+
+# fast build rule for target.
+read_otadata/fast:
+	$(MAKE) -f esp-idf/app_update/CMakeFiles/read_otadata.dir/build.make esp-idf/app_update/CMakeFiles/read_otadata.dir/build
+.PHONY : read_otadata/fast
+
+#=============================================================================
+# Target rules for targets named erase_otadata
+
+# Build rule for target.
+erase_otadata: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 erase_otadata
+.PHONY : erase_otadata
+
+# fast build rule for target.
+erase_otadata/fast:
+	$(MAKE) -f esp-idf/app_update/CMakeFiles/erase_otadata.dir/build.make esp-idf/app_update/CMakeFiles/erase_otadata.dir/build
+.PHONY : erase_otadata/fast
+
+#=============================================================================
+# Target rules for targets named blank_ota_data
+
+# Build rule for target.
+blank_ota_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blank_ota_data
+.PHONY : blank_ota_data
+
+# fast build rule for target.
+blank_ota_data/fast:
+	$(MAKE) -f esp-idf/app_update/CMakeFiles/blank_ota_data.dir/build.make esp-idf/app_update/CMakeFiles/blank_ota_data.dir/build
+.PHONY : blank_ota_data/fast
+
+#=============================================================================
 # Target rules for targets named __idf_app_update
 
 # Build rule for target.
@@ -1423,6 +1462,9 @@ help:
 	@echo "... __idf_xtensa"
 	@echo "... __idf_esp_ringbuf"
 	@echo "... partition_table"
+	@echo "... read_otadata"
+	@echo "... erase_otadata"
+	@echo "... blank_ota_data"
 	@echo "... __idf_app_update"
 	@echo "... __idf_spi_flash"
 	@echo "... apidoc"
