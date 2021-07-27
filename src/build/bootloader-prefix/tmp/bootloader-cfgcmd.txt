@@ -1,1 +1,0 @@
-cmd='/usr/bin/cmake;-DSDKCONFIG=/home/parker/esp/robot/src/sdkconfig;-DIDF_PATH=/home/parker/esp/esp-idf;-DIDF_TARGET=esp32;-DPYTHON_DEPS_CHECKED=1;-DPYTHON=/home/parker/.espressif/python_env/idf4.1_py3.9_env/bin/python;-DEXTRA_COMPONENT_DIRS=/home/parker/esp/esp-idf/components/bootloader;-DLEGACY_INCLUDE_COMMON_HEADERS=;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

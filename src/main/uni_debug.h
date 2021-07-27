@@ -56,10 +56,9 @@ limitations under the License.
   } while (0)
 #define logd(fmt, ...)                                 \
   do {                                                 \
-    if (UNI_LOG_INFO) ets_printf(fmt, ##__VA_ARGS__); \
+    if (UNI_LOG_DEBUG) ets_printf(fmt, ##__VA_ARGS__); \
   } while (0)
 
 #endif  // ! UNI_PLATFORM_PC_DEBUG
 
 #endif  // UNI_DEBUG_H
-//NOTE!!!! PARKER CHANGED LOGD to LOG INFO TO GET INFO WITHOUT CHANGING TO DEBUG STATUS

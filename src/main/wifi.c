@@ -1,3 +1,11 @@
+//additional tcp necessities
+#include <stdio.h>
+#include <sys/fcntl.h>
+#include "esp_system.h"
+#include "lwip/sockets.h"
+#include "lwip/netdb.h"
+#include "lwip/dns.h"
+
 #include "wifi.h"
 
 #include <string.h>
@@ -18,25 +26,25 @@
 
 #include "uni_debug.h"
 
-//additional tcp necessities
-//#include <stdio.h>
-//#include <sys/fcntl.h>
-//#include "esp_system.h"
-//#include "lwip/sockets.h"
-//#include "lwip/netdb.h"
-//#include "lwip/dns.h"
 
 //writing to motors
-//#include "uni_platform_implementation.h"
+#include "uni_platform_implementation.h"
 
-#define MESSAGE "message received."
+#define MESSAGE "rcvd...."
 #define LISTENQ 2
 
 //define true and false bits under nice names
 #define GOT_IPV4_BIT BIT(0)
 #define GOT_IPV6_BIT BIT(1)
 
-#define CONNECTED_BITS (GOT_IPV4_BIT)
+#define TAG "wifi"
+
+#define CONNECTED_BIT (GOT_IPV4_BIT)
+
+struct motor_data {
+    int32_t axis1;
+    int32_t axis2;
+};
 
 //create a group handler for the event flags
 static EventGroupHandle_t s_connect_event_group;
@@ -59,14 +67,17 @@ static void on_got_ip(void *arg, esp_event_base_t event_base,
 esp_err_t wifi_connect(void)
 {
   if (s_connect_event_group != NULL) {
+      logi("invalid state");
     return ESP_ERR_INVALID_STATE;
   }
+     logi("past invalid state");
   s_connect_event_group = xEventGroupCreate();
   start();
   ESP_ERROR_CHECK(esp_register_shutdown_handler(&stop));
-  xEventGroupWaitBits(s_connect_event_group, CONNECTED_BITS, true, true, portMAX_DELAY);
-  ESP_LOGI("Wifi", "Connected to %s", s_connection_name);
-  ESP_LOGI("Wifi", "IPv4 address: " IPSTR, IP2STR(&s_ip_addr));
+  ESP_LOGI(TAG, "got to here at least.....");
+  xEventGroupWaitBits(s_connect_event_group, CONNECTED_BIT, false, true, portMAX_DELAY);
+  logi( "Connected to %s\n", s_connection_name);
+  logi("IPv4 address: \n" IPSTR, IP2STR(&s_ip_addr));
 
   return ESP_OK;
 }
@@ -111,15 +122,17 @@ static void start(void)
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, WIFI_EVENT_STA_DISCONNECTED, &on_wifi_disconnect, NULL));
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &on_got_ip, NULL));
     ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_RAM));
+
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "iParker",
-            .password = "pk121234",
+            .ssid = "mazenet",
+            .password = "Albifrons2020",
         },
     };
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
+
     esp_wifi_connect();
     s_connection_name = CONFIG_EXAMPLE_WIFI_SSID;
 }
@@ -146,7 +159,7 @@ esp_netif_t *get_netif(void)
   return s_esp_netif;
 }
 
-/*
+
 void tcp_server(void *pvParam){
     ESP_LOGI(TAG,"tcp_server task started \n");
     struct sockaddr_in tcpServerAddr;
@@ -166,20 +179,20 @@ void tcp_server(void *pvParam){
     while(1){
         s = socket(AF_INET, SOCK_STREAM, 0);
         if(s < 0) {
-            ESP_LOGE(TAG, "... Failed to allocate socket.\n");
+            logi("... Failed to allocate socket.\n");
             vTaskDelay(1000 / portTICK_PERIOD_MS);
             continue;
         }
         ESP_LOGI(TAG, "... allocated socket\n");
         if(bind(s, (struct sockaddr *)&tcpServerAddr, sizeof(tcpServerAddr)) != 0) {
-            ESP_LOGE(TAG, "... socket bind failed errno=%d \n", errno);
+            logi("... socket bind failed errno=%d \n", errno);
             close(s);
             vTaskDelay(4000 / portTICK_PERIOD_MS);
             continue;
         }
         ESP_LOGI(TAG, "... socket bind done \n");
         if(listen (s, LISTENQ) != 0) {
-            ESP_LOGE(TAG, "... socket listen failed errno=%d \n", errno);
+            logi("... socket listen failed errno=%d \n", errno);
             close(s);
             vTaskDelay(4000 / portTICK_PERIOD_MS);
             continue;
@@ -196,8 +209,11 @@ void tcp_server(void *pvParam){
             do {
                 
                 //recieve the bytes for the motor data
+                
                 r = recv(cs, &motord, 8, 0);
-                printf("pwm1 = %i, pwm2 = %i \n", motord.axis1, motord.axis2);
+                logi("size of r is %d", r);
+                logi("pwm1 = %d, ", motord.axis1);
+                logi("pwm2 = %d \n", motord.axis2);
 
 
                 //check for stop condition (over max value, must agree with sender stop instruction)
@@ -208,19 +224,19 @@ void tcp_server(void *pvParam){
                 //parse the motor speeds and set them accordingly
                 set_pwm0(motord.axis1);
                 set_pwm1(motord.axis2);
+
+                //Writing Back to Computer
+                if( write(cs , MESSAGE , strlen(MESSAGE)) < 0)
+                {
+                    ESP_LOGE(TAG, "... Send failed \n");
+                    close(s);
+                    close(cs);
+                    r = 0;
+                    vTaskDelay(4000 / portTICK_PERIOD_MS);
+                    continue;
+                }
                 
             } while(r > 0);
-            
-            
-            //Writing Back to Computer
-            if( write(cs , MESSAGE , strlen(MESSAGE)) < 0)
-            {
-                ESP_LOGE(TAG, "... Send failed \n");
-                close(s);
-                vTaskDelay(4000 / portTICK_PERIOD_MS);
-                continue;
-            }
-            ESP_LOGI(TAG, "... socket send success");
             
             close(cs);
         }
@@ -234,4 +250,3 @@ void tcp_server(void *pvParam){
 void start_tcp_server(){
     xTaskCreate(&tcp_server,"tcp_server",4096,NULL,5,NULL); //create the task for freeRTOS
 }
-*/
