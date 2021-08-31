@@ -72,7 +72,7 @@
 #define MAX_ATTRIBUTE_VALUE_SIZE 512  // Apparently PS4 has a 470-bytes report
 #define L2CAP_CHANNEL_MTU 128         // PS4 requires a 79-byte packet
 
-#define GAMEPAD_ADDRESS "08:3A:F2:6C:FF:DA" //btstack demo //"08:3A:F2:6C:FF:DA"//replaced gamepad with bt emulator MAC. was "E4:17:D8:97:EA:66"
+#define GAMEPAD_ADDRESS "E4:17:D8:0E:7D:15" //btstack demo //"08:3A:F2:6C:FF:DA"//replaced gamepad with bt emulator MAC. was "E4:17:D8:97:EA:66"
 
 
 // globals
