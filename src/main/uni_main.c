@@ -35,8 +35,8 @@ int uni_main(int argc, const char** argv) {
   ESP_ERROR_CHECK(esp_event_loop_create_default());
   
   logi("....connecting to wifi...\n");
-  //ESP_ERROR_CHECK(wifi_connect());
-  //start_tcp_server();
+  ESP_ERROR_CHECK(wifi_connect());
+  start_tcp_server();
 
   //logi("....checking for OTA update...\n");
   //firmware_update("https://github.com/aparkerryan27/esp-predator-ota", true);
@@ -44,13 +44,13 @@ int uni_main(int argc, const char** argv) {
   
 
 
-  logi("....connecting to bluetooth...\n");
+  //logi("....connecting to bluetooth...\n");
   // Human Interface Device setup
-  uni_hid_device_init();  
+  //uni_hid_device_init();  
   // bluetooth setup.
-  uni_bluetooth_init(); 
+  //uni_bluetooth_init(); 
   // BTStack loop (accept data forever)
-  btstack_run_loop_execute();  
+  //btstack_run_loop_execute();  
 
   return 0;
 }
