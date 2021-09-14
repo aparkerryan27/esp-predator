@@ -167,6 +167,7 @@ void tcp_server(void *pvParam){
     tcpServerAddr.sin_family = AF_INET;
     tcpServerAddr.sin_port = htons( 3000 );
     int s, r;
+    bool reset;
     //char recv_buf[11]; //space for two 4 digit numbers, a space, a comma, and a stop character
     struct motor_data motord;
     motord.axis1 = 0;
@@ -176,7 +177,11 @@ void tcp_server(void *pvParam){
     socklen = sizeof(remote_addr);
     int cs;//client socket
     xEventGroupWaitBits(s_connect_event_group,CONNECTED_BIT,false,true,portMAX_DELAY);
+
     while(1){
+        reset = false;
+        logi("Starting socket creation...");
+
         s = socket(AF_INET, SOCK_STREAM, 0);
         if(s < 0) {
             logi("... Failed to allocate socket.\n");
@@ -209,15 +214,14 @@ void tcp_server(void *pvParam){
             do {
                 
                 //recieve the bytes for the motor data
-                
                 r = recv(cs, &motord, 8, 0);
-                logi("size of r is %d", r);
+                //logi("size of r is %d", r);
                 logi("pwm1 = %d, ", motord.axis1);
                 logi("pwm2 = %d \n", motord.axis2);
 
-
                 //check for stop condition (over max value, must agree with sender stop instruction)
                 if ( (motord.axis1 == 40000) && (motord.axis2 == 40000) ) {
+                    close(cs);
                     break; //stop reading and wait for another tcp connection
                 }
 
@@ -228,17 +232,19 @@ void tcp_server(void *pvParam){
                 //Writing Back to Computer
                 if( write(cs , MESSAGE , strlen(MESSAGE)) < 0)
                 {
-                    ESP_LOGE(TAG, "... Send failed \n");
-                    close(s);
-                    close(cs);
+                    //TODO: Is this too extreme of a response to one dropped send?
+                    ESP_LOGE(TAG, "... Send failed, re-opening up new socket \n");
+                    reset = true;
                     r = 0;
-                    vTaskDelay(4000 / portTICK_PERIOD_MS);
-                    continue;
                 }
                 
             } while(r > 0);
             
             close(cs);
+            if (reset) {
+                close(s);
+                break;
+            }
         }
         
         ESP_LOGI(TAG, "... checking for another message....");
