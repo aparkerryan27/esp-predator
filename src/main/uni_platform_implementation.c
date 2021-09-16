@@ -55,6 +55,7 @@ limitations under the License.
 // Globals
 //
 static int g_delete_keys = 0;
+float led_duty = 100.0;
 
 // PC Debug "instance"
 typedef struct pc_debug_instance_s {
@@ -175,9 +176,8 @@ float f_abs(float n){
 // mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_0,MCPWM_OPR_B); // makes motor turn with max speed
 
 void set_pwm0(int32_t motor){
-  float duty = f_abs((float) motor / 5.12)/4;
+  float duty = f_abs((float) motor / 5.12);
   //float duty = f_abs((float) motor / 5.12)/4; // duty value
-  //float led_duty = 50.0;
   if (motor>=0){
     mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_0,MCPWM_OPR_B); // makes motorB stop
     mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, duty); // used to vary PWM's duty cycle
@@ -187,27 +187,11 @@ void set_pwm0(int32_t motor){
     mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, duty);
     mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
   }
-
-  // LED //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // 1
-  //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1,MCPWM_OPR_A);
-  //mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, led_duty); // used to vary PWM's duty cycle
-  //mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); // used to alter phase of PWM signal
-  
-  // 2
-  //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A);
-  //mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, led_duty);
-  //mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-
-  // 3
-  //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B);
-  //mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B, led_duty);
-  //mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
 }
 
 void set_pwm1(int32_t motor){
-  float duty = f_abs((float) motor / 5.12)/4;
-  //float duty = f_abs((float) motor / 5.12)/4;
+  float duty = f_abs((float) motor / 5.12);
+  //float duty = f_abs((float) motor / 5.12);
   if (motor>=0){
     mcpwm_set_signal_low(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B);
     mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, duty);
@@ -237,10 +221,38 @@ void set_pwm2(int32_t motor){
 }
 
 
+void turn_leds_on(){
+      // 1
+    //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1,MCPWM_OPR_A);
+    mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, led_duty); // used to vary PWM's duty cycle
+    mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); // used to alter phase of PWM signal
+  
+    // 2
+    //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A);
+    mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, led_duty);
+    mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
+
+    // 3
+    //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B);
+    mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B, led_duty);
+    mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
+}
+
+void turn_leds_off(){
+    //1
+    mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1,MCPWM_OPR_B);
+  
+    // 2
+    mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A);
+
+    // 3
+    mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A);
+}
 
 
 
-// CONTROLLER BOOLEANS
+
+// TODO: - move LEDs and Cam functionality out of here and into functions that can be called from wifi.c
 static void pc_debug_on_gamepad_data(uni_hid_device_t* d, uni_gamepad_t* gp) {
   UNUSED(d);
   static uni_gamepad_t prev = {0};
@@ -248,7 +260,6 @@ static void pc_debug_on_gamepad_data(uni_hid_device_t* d, uni_gamepad_t* gp) {
   static int32_t motor_1 = {0};
   static int32_t ccw = 512;
   static int32_t cw = -508;
-  float led_duty = 100.0;
   
 
 
@@ -283,47 +294,6 @@ static void pc_debug_on_gamepad_data(uni_hid_device_t* d, uni_gamepad_t* gp) {
     logi("motor off \n");
     set_pwm2(0);
   } 
-
-  // TURN ON LEDS
-  if (prev.dpad == 1){
-    // 1
-    //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1,MCPWM_OPR_A);
-    mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, led_duty); // used to vary PWM's duty cycle
-    mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); // used to alter phase of PWM signal
-  
-    // 2
-    //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A);
-    mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, led_duty);
-    mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-
-    // 3
-    //mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B);
-    mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B, led_duty);
-    mcpwm_set_duty_type(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-
-  }
-  if (prev.dpad == 2){
-    // 1
-    mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1,MCPWM_OPR_B);
-  
-    // 2
-    mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A);
-
-    // 3
-    mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A);
-
-  }
-
-
-
-
-
-  // turn on leds
-  //if (prev.buttons == BUTTON_A){
-    //set_pwm2(motor_2);
-  //}
-  ////////////////////////////////////////////if (BUTTON_A == )
-  
   
   //uni_gamepad_dump(gp);
   logi("%d , %d \n", motor_0, motor_1); // print joystick axis commands

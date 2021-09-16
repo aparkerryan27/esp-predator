@@ -50,4 +50,7 @@ struct uni_platform* uni_platform_pc_debug_create(void);
 
 void set_pwm0(int32_t motor);
 void set_pwm1(int32_t motor);
+
+void turn_leds_on();
+void turn_leds_off();
 #endif  // UNI_PLATFORM_PC_DEBUG_H

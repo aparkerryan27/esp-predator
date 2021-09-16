@@ -161,6 +161,11 @@ esp_netif_t *get_netif(void)
 
 
 void tcp_server(void *pvParam){
+    //TODO: blink LEDS until the connection is set
+    turn_leds_on();
+    turn_leds_off();
+    turn_leds_on();
+
     ESP_LOGI(TAG,"tcp_server task started \n");
     struct sockaddr_in tcpServerAddr;
     tcpServerAddr.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -243,6 +248,10 @@ void tcp_server(void *pvParam){
             close(cs);
             if (reset) {
                 close(s);
+
+                //stop the motors after breaking communication
+                set_pwm0(0);
+                set_pwm1(0);
                 break;
             }
         }
