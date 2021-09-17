@@ -163,8 +163,6 @@ esp_netif_t *get_netif(void)
 void tcp_server(void *pvParam){
     //TODO: blink LEDS until the connection is set
     turn_leds_on();
-    turn_leds_off();
-    turn_leds_on();
 
     ESP_LOGI(TAG,"tcp_server task started \n");
     struct sockaddr_in tcpServerAddr;
@@ -223,12 +221,6 @@ void tcp_server(void *pvParam){
                 //logi("size of r is %d", r);
                 logi("pwm1 = %d, ", motord.axis1);
                 logi("pwm2 = %d \n", motord.axis2);
-
-                //check for stop condition (over max value, must agree with sender stop instruction)
-                if ( (motord.axis1 == 40000) && (motord.axis2 == 40000) ) {
-                    close(cs);
-                    break; //stop reading and wait for another tcp connection
-                }
 
                 //parse the motor speeds and set them accordingly
                 set_pwm0(motord.axis1);
