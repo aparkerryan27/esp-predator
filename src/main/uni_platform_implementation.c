@@ -51,6 +51,16 @@ limitations under the License.
 #define GPIO_PWM1A1_OUT 18
 #define GPIO_PWM1B1_OUT 19
 
+////////////////////////////////////////////////////////////////
+
+
+//TODO: seperate this file from gamepad functions 
+     // and implementation for use with wifi
+
+
+
+
+////////////////////////////////////////////////////////////////
 //
 // Globals
 //
@@ -174,10 +184,12 @@ float f_abs(float n){
 
 // OPERATE
 // mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_0,MCPWM_OPR_B); // makes motor turn with max speed
+//NOTE: For Large Yellow Motors, min duty = 70
 
 void set_pwm0(int32_t motor){
-  float duty = f_abs((float) motor / 5.12);
-  //float duty = f_abs((float) motor / 5.12)/4; // duty value
+  
+  float duty = f_abs((float) motor;
+
   if (motor>=0){
     mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_0,MCPWM_OPR_B); // makes motorB stop
     mcpwm_set_duty(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, duty); // used to vary PWM's duty cycle
@@ -190,13 +202,14 @@ void set_pwm0(int32_t motor){
 }
 
 void set_pwm1(int32_t motor){
-  float duty = f_abs((float) motor / 5.12);
-  //float duty = f_abs((float) motor / 5.12);
+
+  float duty = f_abs((float) motor);
+
   if (motor>=0){
     mcpwm_set_signal_low(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B);
     mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, duty);
     mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-  }else {
+  } else {
     mcpwm_set_signal_low(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A);
     mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, duty);
     mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
@@ -206,9 +219,9 @@ void set_pwm1(int32_t motor){
 
 // cam ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void set_pwm2(int32_t motor){
-  //float duty = f_abs((float) motor / 5.12)/8;
-  float duty = f_abs((float) motor / 5.12);
-  //float duty = 1;
+
+  float duty = f_abs((float) motor);
+
   if (motor>=0){
     mcpwm_set_signal_low(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B);
     mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, duty);
@@ -249,18 +262,36 @@ void turn_leds_off(){
     mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A);
 }
 
+  static int32_t ccw = 512;
+  static int32_t cw = -508;
+void activate_cam() {
+  //TODO: find out required duration from Gabbie and set this function to execute properly
 
+  // turn cam motor cw
+  if (prev.buttons == BUTTON_A){
+    logi("A pressed \n");
+    set_pwm2(cw);
+  }
+  // turn cam motor ccw
+  if (prev.buttons == BUTTON_B){
+    logi("B pressed \n");
+    set_pwm2(ccw);
+  }
+  // turn cam motor off
+  if (prev.buttons == 0){
+    logi("motor off \n");
+    set_pwm2(0);
+  } 
 
+}
+  
+  
 
-// TODO: - move LEDs and Cam functionality out of here and into functions that can be called from wifi.c
 static void pc_debug_on_gamepad_data(uni_hid_device_t* d, uni_gamepad_t* gp) {
   UNUSED(d);
   static uni_gamepad_t prev = {0};
   static int32_t motor_0 = {0};
   static int32_t motor_1 = {0};
-  static int32_t ccw = 512;
-  static int32_t cw = -508;
-  
 
 
   if (memcmp(&prev, gp, sizeof(*gp)) == 0) {
