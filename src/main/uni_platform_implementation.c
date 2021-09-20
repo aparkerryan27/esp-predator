@@ -188,7 +188,7 @@ float f_abs(float n){
 
 void set_pwm0(int32_t motor){
   
-  float duty = f_abs((float) motor;
+  float duty = f_abs((float) motor);
 
   if (motor>=0){
     mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_TIMER_0,MCPWM_OPR_B); // makes motorB stop
@@ -226,7 +226,7 @@ void set_pwm2(int32_t motor){
     mcpwm_set_signal_low(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B);
     mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, duty);
     mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-  }else {
+  } else {
     mcpwm_set_signal_low(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A);
     mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, duty);
     mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
@@ -268,20 +268,20 @@ void activate_cam() {
   //TODO: find out required duration from Gabbie and set this function to execute properly
 
   // turn cam motor cw
-  if (prev.buttons == BUTTON_A){
+  //BUTTON_A){
     logi("A pressed \n");
     set_pwm2(cw);
-  }
+  
   // turn cam motor ccw
-  if (prev.buttons == BUTTON_B){
+  // BUTTON_B){
     logi("B pressed \n");
     set_pwm2(ccw);
-  }
+  
   // turn cam motor off
-  if (prev.buttons == 0){
+  //no button press
     logi("motor off \n");
     set_pwm2(0);
-  } 
+  
 
 }
   

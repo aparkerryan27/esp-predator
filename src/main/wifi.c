@@ -222,9 +222,9 @@ void tcp_server(void *pvParam){
                 logi("pwm1 = %d, ", motord.axis1);
                 logi("pwm2 = %d \n", motord.axis2);
 
-                //parse the motor speeds and set them accordingly
+                //parse the motor speeds and set them accordingly (flip the signs based on motor wiring)
                 set_pwm0(motord.axis1);
-                set_pwm1(motord.axis2);
+                set_pwm1(-1 * motord.axis2);
 
                 //Writing Back to Computer
                 if( write(cs , MESSAGE , strlen(MESSAGE)) < 0)
