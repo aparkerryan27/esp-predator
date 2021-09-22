@@ -53,4 +53,6 @@ void set_pwm1(int32_t motor);
 
 void turn_leds_on();
 void turn_leds_off();
+void activate_cam();
+
 #endif  // UNI_PLATFORM_PC_DEBUG_H

@@ -41,9 +41,12 @@
 
 #define CONNECTED_BIT (GOT_IPV4_BIT)
 
-struct motor_data {
+//TODO: move items to a .h instead if needed 
+struct bot_data {
     int32_t axis1;
     int32_t axis2;
+    bool stimulus_trigger;
+    bool light_trigger;
 };
 
 //create a group handler for the event flags
@@ -171,10 +174,15 @@ void tcp_server(void *pvParam){
     tcpServerAddr.sin_port = htons( 3000 );
     int s, r;
     bool reset;
-    //char recv_buf[11]; //space for two 4 digit numbers, a space, a comma, and a stop character
-    struct motor_data motord;
-    motord.axis1 = 0;
-    motord.axis2 = 0;
+
+    struct bot_data botd;
+    botd.axis1 = 0;
+    botd.axis2 = 0;
+    botd.stimulus_trigger = false;
+    botd.light_trigger = false;
+
+    struct bot_data prev_botd = botd;
+
     static struct sockaddr_in remote_addr;
     static unsigned int socklen;
     socklen = sizeof(remote_addr);
@@ -217,15 +225,26 @@ void tcp_server(void *pvParam){
             do {
                 
                 //recieve the bytes for the motor data
-                r = recv(cs, &motord, 8, 0);
+                r = recv(cs, &botd, sizeof(botd), 0);
                 //logi("size of r is %d", r);
-                logi("pwm1 = %d, ", motord.axis1);
-                logi("pwm2 = %d \n", motord.axis2);
+                logi("pwm1 = %d, ", botd.axis1);
+                logi("pwm2 = %d \n", botd.axis2);
 
                 //parse the motor speeds and set them accordingly (flip the signs based on motor wiring)
-                set_pwm0(motord.axis1);
-                set_pwm1(-1 * motord.axis2);
+                set_pwm0(botd.axis1);
+                set_pwm1(-1 * botd.axis2);
 
+
+                //check for triggers
+                if (botd.light_trigger != prev_botd.light_trigger) {
+                    botd.light_trigger ? turn_leds_on() : turn_leds_off();
+                }
+
+                if (botd.stimulus_trigger) {
+                    activate_cam();
+                }
+
+                //check for new 
                 //Writing Back to Computer
                 if( write(cs , MESSAGE , strlen(MESSAGE)) < 0)
                 {
@@ -234,6 +253,8 @@ void tcp_server(void *pvParam){
                     reset = true;
                     r = 0;
                 }
+
+                prev_botd = botd;
                 
             } while(r > 0);
             
